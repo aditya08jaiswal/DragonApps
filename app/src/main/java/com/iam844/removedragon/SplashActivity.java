@@ -1,4 +1,4 @@
-package com.iam844.dragonapps;
+package com.iam844.removedragon;
 
 import android.content.Intent;
 import android.os.Bundle;
