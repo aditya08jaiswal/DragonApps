@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.iam844.dragonapps.MainActivity">
+    <item
+        android:id="@+id/action_rate"
+        android:orderInCategory="100"
+        android:title="@string/action_rate"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_contact"
+        android:orderInCategory="100"
+        android:title="@string/action_contact"/>
+    <item
+        android:id="@+id/action_privacy"
+        android:orderInCategory="100"
+        android:title="@string/action_privacy"
+        app:showAsAction="never" />
+</menu>
