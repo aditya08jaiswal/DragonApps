@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dragon Apps</string>
+    <string name="app_name">Find Dragon Apps</string>
     <string name="action_share">Share App</string>
     <string name="action_rate">Rate App</string>
     <string name="action_contact">Contact Us</string>

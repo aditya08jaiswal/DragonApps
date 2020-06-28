@@ -1,4 +1,4 @@
-package com.iam844.removedragon;
+package com.iam844.finddragonapps;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

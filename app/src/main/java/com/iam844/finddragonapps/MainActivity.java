@@ -1,4 +1,4 @@
-package com.iam844.removedragon;
+package com.iam844.finddragonapps;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentShareApp = new Intent(android.content.Intent.ACTION_SEND);
                 intentShareApp.setType("text/plain");
-                String shareBody = "Delete Chinese apps and support your country. Aatmanirbhar Bharat.\n" + "https://play.google.com/store/apps/details?id=com.iam844.removedragon";
+                String shareBody = "Delete Chinese apps and support your country. Aatmanirbhar Bharat.\n" + "https://play.google.com/store/apps/details?id=com.iam844.finddragonapps";
                 intentShareApp.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
                 intentShareApp.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(intentShareApp, "Share via"));

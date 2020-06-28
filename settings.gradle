@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Remove Dragon"
+rootProject.name = "Find Dragon Apps"
