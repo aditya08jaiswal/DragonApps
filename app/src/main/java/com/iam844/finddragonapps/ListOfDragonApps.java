@@ -5,11 +5,9 @@ import java.util.List;
 
 public class ListOfDragonApps {
 
-    public ListOfDragonApps() { }
+        private List<String> dragonApps = new ArrayList<>();
 
-    ArrayList<String> dragonApps = new ArrayList<>();
-
-    public List<String> getDragonApps() {
+        List<String> getDragonApps() {
 
         dragonApps.add("cn.xender");
 

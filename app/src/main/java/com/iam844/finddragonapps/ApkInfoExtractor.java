@@ -16,19 +16,15 @@ import java.util.List;
 public class ApkInfoExtractor {
 
     Context context1;
-    ListOfDragonApps listOfDragonApps = new ListOfDragonApps();
-
-    public ListOfDragonApps getListOfDragonApps() {
-        return listOfDragonApps;
-    }
 
     public ApkInfoExtractor(Context context2){
         context1 = context2;
     }
 
-    public List<String> GetAllInstalledApkInfo(){
+    public List<String> getAllInstalledApkInfo(){
 
-        List<String> ApkPackageName = new ArrayList<>();
+        List<String> apkPackageName = new ArrayList<>();
+        ListOfDragonApps listOfDragonApps = new ListOfDragonApps();
 
         Intent intent = new Intent(Intent.ACTION_MAIN,null);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
@@ -38,11 +34,11 @@ public class ApkInfoExtractor {
         for(ResolveInfo resolveInfo : resolveInfoList){
             ActivityInfo activityInfo = resolveInfo.activityInfo;
             if(!isSystemPackage(resolveInfo)){
-                ApkPackageName.add(activityInfo.applicationInfo.packageName);
+                apkPackageName.add(activityInfo.applicationInfo.packageName);
             }
         }
-        ApkPackageName.retainAll(getListOfDragonApps().getDragonApps());
-        return ApkPackageName;
+        apkPackageName.retainAll(listOfDragonApps.getDragonApps());
+        return apkPackageName;
     }
 
     public boolean isSystemPackage(ResolveInfo resolveInfo){
@@ -63,21 +59,21 @@ public class ApkInfoExtractor {
         return drawable;
     }
 
-    public String GetAppName(String ApkPackageName){
+    public String getAppName(String ApkPackageName){
 
-        String Name = "";
+        String name = "";
         ApplicationInfo applicationInfo;
 
         PackageManager packageManager = context1.getPackageManager();
         try {
             applicationInfo = packageManager.getApplicationInfo(ApkPackageName, 0);
             if(applicationInfo!=null){
-                Name = (String)packageManager.getApplicationLabel(applicationInfo);
+                name = (String)packageManager.getApplicationLabel(applicationInfo);
             }
         }catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        return Name;
+        return name;
     }
 
 }

@@ -38,7 +38,7 @@ public class SecondFragment extends Fragment {
         recyclerViewLayoutManager = new GridLayoutManager(view.getContext(), 1);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
 
-        allInstalledApps= new ApkInfoExtractor(view.getContext()).GetAllInstalledApkInfo();
+        allInstalledApps= new ApkInfoExtractor(view.getContext()).getAllInstalledApkInfo();
         adapter = new AppsAdapter(view.getContext(), allInstalledApps);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -50,7 +50,7 @@ public class SecondFragment extends Fragment {
     public void onResume()
     {
         super.onResume();
-        allInstalledApps=new ApkInfoExtractor(context).GetAllInstalledApkInfo();
+        allInstalledApps=new ApkInfoExtractor(context).getAllInstalledApkInfo();
 
         if (allInstalledApps.isEmpty()) {
             LinearLayout iv = mView.findViewById(R.id.fragment_background);
