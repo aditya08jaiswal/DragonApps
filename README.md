@@ -1,4 +1,4 @@
-#Dragon Apps
+##Dragon Apps
 
 To remove all Chiinese apps from your phone.</string>
 
